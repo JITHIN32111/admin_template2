@@ -1,0 +1,52 @@
+/* Add this to your App.css or a dedicated CSS file */
+
+.sidebar {
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.sidebar-open {
+  width: 15rem; /* Adjust as needed */
+  opacity: 1;
+}
+
+.sidebar-closed {
+  width: 4rem; /* Adjust as needed */
+  opacity: 0;
+}
+
+/* For medium to larger devices */
+@media (min-width: 768px) {
+  .sidebar-closed {
+    opacity: 0.7; /* Adjust opacity for medium to larger devices */
+  }
+}
+
+/* For small devices */
+@media (max-width: 767px) {
+  .sidebar-closed {
+    opacity: 0; /* No opacity on small devices */
+  }
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-text {
+  transition: opacity 0.3s ease;
+}
+
+/* Ensure text is hidden on small devices */
+@media (max-width: 767px) {
+  .sidebar-text {
+    display: none;
+  }
+}
